@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emails Editor</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="emails-input">
+      <div class="emails__container">
+        <div class="emails"></div>
+        <div class="emails__button">
+          <button class="emails__button-btn btn-add">Add email</button>
+          <button class="emails__button-btn btn-count">
+            Get email count
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="emails-input2">
+      <div class="emails__container">
+        <div class="emails"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./emails-editor.js"></script>
+    <script>
+      var container = document.querySelector("#emails-input");
+      var inputContainer = container.querySelector(".emails");
+
+      var container2 = document.querySelector("#emails-input2");
+      var inputContainer2 = container2.querySelector(".emails");
+
+      var boardName = "Miro Email Board";
+      var emailsInput = EmailEditor(inputContainer, boardName);
+      var emailsInput2 = EmailEditor(inputContainer2);
+      var btnContainer = container.querySelector(".emails__button");
+      const addBtn = container.querySelector(".btn-add");
+      const btnCount = container.querySelector(".btn-count");
+      addBtn.addEventListener("click", emailsInput.addRandomEmail);
+      btnCount.addEventListener("click", emailsInput.getEmailsCounter);
+
+    </script>
+  </body>
+</html>
