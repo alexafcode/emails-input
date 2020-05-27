@@ -104,7 +104,7 @@ export const EmailEditor = (rootElement, boardName = "Miro Board") => {
     alert(`Valid emails ${validEmailsList.length}`);
   };
 
-  emailsInput.addEventListener("keydown", inputChange, false);
+  emailsInput.addEventListener("keydown", inputChange);
   emailsInput.addEventListener("blur", focusOver);
   emailsInput.addEventListener("paste", pasteEmails);
 
